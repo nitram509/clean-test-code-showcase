@@ -5,6 +5,9 @@ import (
 	"testing"
 )
 
+// AUTO GENERATED code by IntelliJ
+// TODO implement ;)
+
 func TestParseFirmwareInformation(t *testing.T) {
 	type args struct {
 		text string

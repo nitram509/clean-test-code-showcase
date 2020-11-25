@@ -5,6 +5,7 @@ import (
 )
 
 // See https://golang.org/pkg/testing/
+// The quasi standard ;)
 
 func Test_betaflight_message_can_be_parsed__with_GOLANG(t *testing.T) {
 	info := ParseFirmwareInformation("# Betaflight / SPRACINGF3EVO (SPEV) 3.4.0 Apr 17 2018 / 14:00:13 (b2c247d34) MSP API: 1.39")
