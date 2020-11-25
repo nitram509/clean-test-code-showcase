@@ -1,7 +1,8 @@
-package configurations
+package parser
 
 import (
 	"regexp"
+	"strconv"
 	"strings"
 )
 
@@ -9,12 +10,10 @@ type FirmwareInformation struct {
 	FirmwareName   string
 	TargetName     string
 	TargetDetail   string
-	Version        string
+	Version        int64
 	ReleaseDateStr string
 	GitHash        string
 	ReleaseTime    string
-	// extended
-	ReleaseNotesUrl string
 }
 
 func ParseFirmwareInformation(text string) *FirmwareInformation {
@@ -34,7 +33,7 @@ func createSearchExpression() (*regexp.Regexp, error) {
 		"(\\w+)?\\s/\\s" +
 		"(\\w+)?\\s" +
 		"\\((\\w+)\\)\\s" +
-		"(\\d+\\.\\d+\\.\\d+)?\\s" +
+		"(\\d+)\\.\\d+\\.\\d+\\s" +
 		"(\\w+\\s\\d+\\s\\d{4})?\\s/\\s" +
 		"(\\d+:\\d+:\\d+)?\\s" +
 		"\\((\\w+)\\)?")
@@ -52,7 +51,7 @@ func parseLine(regex *regexp.Regexp, text string) *FirmwareInformation {
 			info.TargetDetail = string(submatch[3])
 		}
 		if len(submatch) > 4 {
-			info.Version = string(submatch[4])
+			info.Version, _ = strconv.ParseInt(string(submatch[4]), 10, 64)
 		}
 		if len(submatch) > 5 {
 			info.ReleaseDateStr = string(submatch[5])
