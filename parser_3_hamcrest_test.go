@@ -4,7 +4,7 @@ import (
 	"testing"
 )
 
-// See https://github.com/corbym/gocrest
+// See https://github.com/rdrdr/hamcrest
 // (exactly 27 Stars on Github)
 
 // BROKEN ?!?! Last Release from 2011?

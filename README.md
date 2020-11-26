@@ -20,7 +20,7 @@ Example firmware String: \
 
 1. Using native/vanilla GO language and library
 2. Using famous [stretchr/testify](https://github.com/stretchr/testify) library
-3. Using broken and outdated [rdrdr/hamcrest](https://github.com/corbym/gocrest) library
+3. Using broken and outdated [rdrdr/hamcrest](https://github.com/rdrdr/hamcrest) library
 4. Using almost unknown [corbym/gocrest](https://github.com/corbym/gocrest) library
 
 ### What is / Why "HAMCREST"?
