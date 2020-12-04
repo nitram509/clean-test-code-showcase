@@ -22,6 +22,7 @@ Example firmware String: \
 2. Using famous [stretchr/testify](https://github.com/stretchr/testify) library
 3. Using broken and outdated [rdrdr/hamcrest](https://github.com/rdrdr/hamcrest) library
 4. Using almost unknown [corbym/gocrest](https://github.com/corbym/gocrest) library
+    * fun fact https://star-history.t9t.io/#corbym/gocrest
 
 ### What is / Why "HAMCREST"?
 
